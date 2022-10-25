@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="HoaQua" id="HoaQua">
+        <option value="Ổi">Ổi</option>
+        <option value="DưaHấu">Dưa Hấu</option>
+        <option value="Táo">Táo</option>
+        <option value="Xoài">Xoài</option>
+        <option value="Cam">Cam</option>
+        <option value="ChômChôm">Chôm Chôm</option>
+        <option value="MăngCụt">Măng Cụt</option>
+    </select>
+    <button onclick="GiaHoaQua()">giá hoa quả</button>
+    <p id="price"></p>
+    <script>
+        function GiaHoaQua() {
+            let Fruit = document.getElementById("HoaQua").value;
+            let Ketqua = " ";
+            switch(Fruit) {
+                case "Ổi":
+                    Ketqua = 20000;
+                    break;
+                case "DưaHấu":
+                    Ketqua = 20000;
+                    break;
+                case "Táo":
+                    Ketqua = 30000;
+                    break;
+                case "Xoài":
+                    Ketqua = 30000;
+                    break;
+                case "Cam":
+                    Ketqua = 40000;
+                    break;
+                case "ChômChôm":
+                    Ketqua = 40000;
+                    break;
+                case "MăngCụt":
+                    Ketqua = 50000;
+                    break;
+            }
+            document.getElementById("price").innerHTML = Number(Ketqua) + " VND/kg";
+        }
+    </script>
+</body>
+</html>
