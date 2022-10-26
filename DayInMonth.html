@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Tính số ngày trong một tháng</h2>
+    <p>
+        <input type="number" min="1" max="12" id="thang"/>
+        <button type="button" onclick="DayInMonth()">Tinh số ngày</button>
+    </p>
+    <p id="NgayTrongThang"></p>
+    <script>
+        function DayInMonth(){
+            let Month = document.getElementById("thang").value;
+            let SoNgay= "";
+            switch(Month){
+                case "1":
+                case "3":
+                case "5":
+                case "7":
+                case "8":
+                case "10":
+                case "12":
+                    SoNgay = 31;
+                    break;
+                case "4":
+                case "6":
+                case "9":
+                case "11": 
+                    SoNgay = 30;
+                    break;
+                case "2":
+                    SoNgay = 28;
+                    break;
+            }
+            document.getElementById("NgayTrongThang").innerHTML = "Tháng " + Number(Month) + " có " + Number(SoNgay) +" ngày";
+        }
+    </script>
+</body>
+</html>
